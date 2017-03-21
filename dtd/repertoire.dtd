@@ -1,8 +1,15 @@
+<!-- repertoire -->
 <!ELEMENT repertoire (personne*)>
+
+<!-- personne -->
 <!ELEMENT personne (nom,prenom,adresse,telephones,emails)>
 <!ATTLIST personne sexe (masculin|feminin) #REQUIRED>
+
+<!-- nom et prenom -->
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT prenom (#PCDATA)>
+
+<!-- adresse -->
 <!ELEMENT adresse (numero,voie,codePostal,ville,pays)>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT voie (#PCDATA)>
@@ -10,9 +17,13 @@
 <!ELEMENT codePostal (#PCDATA)>
 <!ELEMENT ville (#PCDATA)>
 <!ELEMENT pays (#PCDATA)>
+
+<!-- telephones -->
 <!ELEMENT telephones (telephone+)>
 <!ELEMENT telephone (#PCDATA)>
 <!ATTLIST telephone type (fixe | bureau | portable) #REQUIRED>
+
+<!-- emails -->
 <!ELEMENT emails (email+)>
 <!ELEMENT email (#PCDATA)>
 <!ATTLIST email type (personnel | professionnel) #REQUIRED>
