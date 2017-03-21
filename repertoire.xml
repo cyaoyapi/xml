@@ -1,29 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+
 <repertoire>
-				<personne sexe="masculin">
-				 				<nom>YAO</nom>
-				 				<prenom>Cyrille</prenom>
-				 				<adresse>18 BP 1954 ABIDJAN 18</adresse>
-				 				<telephones>
-				 								<numero type="personnel">+225 05448635</numero>
-				 								<numero type="professionel">+225 42697920</numero>
-				 				</telephones>
-				 				<emails>
-				 								<email type="personnel">cyaoyapi@gmail.com</email>
-				 								<email type="professionel">yao.cyrille@pacci.ci</email>
-				 				</emails>
-				</personne>
-				
-				<personne sexe="feminin">
-				 				<nom>YAO</nom>
-				 				<prenom>Agnes</prenom>
-				 				<adresse>18 BP 1954 ABIDJAN 18</adresse>
-				 				<telephones>
-				 								<numero type="personnel">+225 02991798</numero>
-				 				</telephones>
-				 				<emails>
-				 								<email type="personnel">termonedmonde@yahoo.fr</email>
-				 								<email type="personnel">agnesyao@gmail.com</email>
-				 				</emails>
-				</personne>
+
+    <!-- John DOE -->
+
+    <personne sexe="masculin">
+
+        <nom>DOE</nom>
+
+        <prenom>John</prenom>
+
+        <adresse>
+
+            <numero>7</numero>
+
+            <voie type="impasse">impasse du chemin</voie>
+
+            <codePostal>75015</codePostal>
+
+            <ville>PARIS</ville>
+
+            <pays>FRANCE</pays>
+
+        </adresse>
+
+        <telephones>
+
+            <telephone type="fixe">01 02 03 04 05</telephone>
+
+            <telephone type="portable">06 07 08 09 10</telephone>
+
+        </telephones>
+
+        <emails>
+
+            <email type="personnel">john.doe@wanadoo.fr</email>
+
+            <email type="professionnel">john.doe@societe.com</email>
+
+        </emails>
+
+    </personne>
+
+    
+
+    <!-- Marie POPPINS -->
+
+    <personne sexe="feminin">
+
+        <nom>POPPINS</nom>
+
+        <prenom>Marie</prenom>
+
+        <adresse>
+
+            <numero>28</numero>
+
+            <voie type="avenue">avenue de la république</voie>
+
+            <codePostal>13005</codePostal>
+
+            <ville>MARSEILLE</ville>
+
+            <pays>FRANCE</pays>
+
+        </adresse>
+
+        <telephones>
+
+            <telephone type="bureau">04 05 06 07 08</telephone>
+
+        </telephones>
+
+        <emails>
+
+            <email type="professionnel">contact@poppins.fr</email>
+
+        </emails>
+
+    </personne>
+
 </repertoire>
