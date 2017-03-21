@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE boutique SYSTEM "dtd/boutique.dtd">
+
+<boutique>
+	<telephone>
+		<marque>Sumsung</marque>
+		<modele>Galaxy S7</modele>
+	</telephone>
+
+	<telephone>
+		<marque>Infinix</marque>
+		<modele>HOT 4</modele>
+	</telephone>
+
+	<telephone>
+		<marque>Windows Lumia</marque>
+		<modele>5462</modele>
+	</telephone>
+</boutique>
