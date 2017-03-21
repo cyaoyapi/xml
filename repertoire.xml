@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<repertoire>
+				<personne sexe="masculin">
+				 				<nom>YAO</nom>
+				 				<prenom>Cyrille</prenom>
+				 				<adresse>18 BP 1954 ABIDJAN 18</adresse>
+				 				<telephones>
+				 								<numero type="personnel">+225 05448635</numero>
+				 								<numero type="professionel">+225 42697920</numero>
+				 				</telephones>
+				 				<emails>
+				 								<email type="personnel">cyaoyapi@gmail.com</email>
+				 								<email type="professionel">yao.cyrille@pacci.ci</email>
+				 				</emails>
+				</personne>
+				
+				<personne sexe="feminin">
+				 				<nom>YAO</nom>
+				 				<prenom>Agnes</prenom>
+				 				<adresse>18 BP 1954 ABIDJAN 18</adresse>
+				 				<telephones>
+				 								<numero type="personnel">+225 02991798</numero>
+				 				</telephones>
+				 				<emails>
+				 								<email type="personnel">termonedmonde@yahoo.fr</email>
+				 								<email type="personnel">agnesyao@gmail.com</email>
+				 				</emails>
+				</personne>
+</repertoire>
