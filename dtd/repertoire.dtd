@@ -1,6 +1,6 @@
 <!ELEMENT repertoire (personne*)>
 <!ELEMENT personne (nom,prenom,adresse,telephones,emails)>
-<!ATTLIST personne sexe (masculin|féminin) #REQUIRED>
+<!ATTLIST personne sexe (masculin|feminin) #REQUIRED>
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT prenom (#PCDATA)>
 <!ELEMENT adresse (numero,voie,codePostal,ville,pays)>
