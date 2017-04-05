@@ -3,7 +3,7 @@
 
 <!-- personne -->
 <!ELEMENT personne (nom,prenom,adresse,telephones,emails)>
-<!ATTLIST personne sexe (masculin|feminin) #REQUIED>
+<!ATTLIST personne sexe (masculin | feminin) #REQUIRED>
 
 <!-- nom et prénom -->
 <!ELEMENT nom (#PCDATA)>
@@ -13,17 +13,18 @@
 <!ELEMENT adresse (numero,voie,codePostal,ville,pays)>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT voie (#PCDATA)>
-<!ATTLIST voie type CDATA #REQUIED>
+<!ATTLIST voie type CDATA #REQUIRED>
+<!ELEMENT codePostal (#PCDATA)>
 <!ELEMENT ville (#PCDATA)>
 <!ELEMENT pays (#PCDATA)>
 
 <!-- telephones -->
 <!ELEMENT telephones (telephone+)>
 <!ELEMENT telephone (#PCDATA)>
-<!ATTLIST telephone type (fixe|portable) #REQUIED>
+<!ATTLIST telephone type CDATA #REQUIRED>
 
 <!-- emails -->
 <!ELEMENT emails (email+)>
 <!ELEMENT email (#PCDATA)>
-<!ATTLIST email type (personnel|professionnel) #REQUIED>
+<!ATTLIST email type (personnel| professionnel) #REQUIRED>
 
