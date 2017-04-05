@@ -3,9 +3,9 @@
 
 <!-- personne -->
 <!ELEMENT personne (nom,prenom,adresse,telephones,emails)>
-<!ATTLIST personne sexe (masculin|feminin) #REQUIRED>
+<!ATTLIST personne sexe (masculin|feminin) #REQUIED>
 
-<!-- nom et prenom -->
+<!-- nom et prénom -->
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT prenom (#PCDATA)>
 
@@ -13,17 +13,17 @@
 <!ELEMENT adresse (numero,voie,codePostal,ville,pays)>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT voie (#PCDATA)>
-<!ATTLIST voie type (impasse | avenue | rue | boulevard) #REQUIRED>
-<!ELEMENT codePostal (#PCDATA)>
+<!ATTLIST voie type CDATA #REQUIED>
 <!ELEMENT ville (#PCDATA)>
 <!ELEMENT pays (#PCDATA)>
 
 <!-- telephones -->
 <!ELEMENT telephones (telephone+)>
 <!ELEMENT telephone (#PCDATA)>
-<!ATTLIST telephone type (fixe | bureau | portable) #REQUIRED>
+<!ATTLIST telephone type (fixe|portable) #REQUIED>
 
 <!-- emails -->
 <!ELEMENT emails (email+)>
 <!ELEMENT email (#PCDATA)>
-<!ATTLIST email type (personnel | professionnel) #REQUIRED>
+<!ATTLIST email type (personnel|professionnel) #REQUIED>
+
