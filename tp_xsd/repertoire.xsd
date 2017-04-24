@@ -1,6 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	
+
+	<!-- Création d'un type simple "typeSexe" et utlisation -->
+	<xsd:attribute name="typeSexe">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:NCName">
+				<xsd:enumeration value="masculin"></xsd:enumeration>
+				<xsd:enumeration value="feminin"></xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+
+	<xsd:attribute name="sexe" type="typeSexe"></xsd:attribute>
+
+	<!-- Nom et Prénoms -->
+
+	<xsd:element name="nom" type="xsd:string"></xsd:element>
+	<xsd:element name="prenom" type="xsd:string"></xsd:element>
+
+	<!-- Adresse -->
+		<!-- Numéro -->
+	<xsd:element name="numero" type="xsd:nonNegativeInteger"></xsd:element>
+
+		<!-- "Voie" un element complexe avec contenu simple -->
+	<xsd:element name="voie">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="type" type="xsd:Name"></xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+		<!-- CodePostal, Ville et Pays -->
+	<xsd:element name="codePostal" type="xsd:positiveInteger"></xsd:element>
+	<xsd:element name="ville" type="xsd:token"></xsd:element>
+	<xsd:element name="pays" type="xsd:token"></xsd:element>
+		
+		<!-- "Adresse" élement complexe avec contenu standard(composé d'élements) -->
+	<xsd:element name="adresse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="numero"></xsd:element>
+				<xsd:element ref="voie"></xsd:element>
+				<xsd:element ref="codePostal"></xsd:element>
+				<xsd:element ref="ville"></xsd:element>
+				<xsd:element ref="pays"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Téléphones -->
+
+		<!-- Création d'un type simple "numeroTelephone" et utlisation -->
+
+	<xsd:element name="numeroTelephone">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="^0[1-9]([-. ]?[0-9]{2}){4}$"></xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+			<!-- téléphone : élement complexe avec contenu simple-->
+	<xsd:element name="telephone">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="numeroTelephone">
+					<xsd:attribute name="type" type="Name"></xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+		<!-- Bloc téléphones : élement complexe avec contenu standard-->
+
+	<xsd:elements name="telephones">
+		<xsd:complexType>
+			<xsd:element ref="telephone"  maxOccurs="unbounded"></xsd:element>
+		</xsd:complexType>
+	</xsd:elements>
+
+
+
+	<!-- Emails -->
+
+		<!-- Création d'un type simple "adresseEmail" et utlisation -->
+
+	<xsd:element name="adresseEmail">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="[^@]+@[^\.]+\..+"></xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+			<!-- email : élement complexe avec contenu simple-->
+	<xsd:element name="email">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="adresseEmail">
+					<xsd:attribute name="type" type="Name"></xsd:attribute>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+		<!-- Bloc emails : élement complexe avec contenu standard-->
+
+	<xsd:elements name="emails">
+		<xsd:complexType>
+			<xsd:element ref="email"  maxOccurs="unbounded"></xsd:element>
+		</xsd:complexType>
+	</xsd:elements>
+
+
+	<!-- Personne : élément complexe avec contenu standard(sequence)-->
+
+	<xsd:element name="personne">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nom"></xsd:element>
+				<xsd:element ref="prenom"></xsd:element>
+				<xsd:element ref="adresse"></xsd:element>
+				<xsd:element ref="telephones"></xsd:element>
+				<xsd:element ref="emails"></xsd:element>
+			</xsd:sequence>
+
+			<xsd:attribute ref="sexe" use="required"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<!-- repertoire : élément racine complexe avec contenu standard(sequence)-->
+
+	<xsd:element name="repertoire">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="personne"  maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
 
 </xsd:schema>
