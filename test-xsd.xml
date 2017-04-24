@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<racine xmlns:xsi="http://www.w3.org/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/test.xsd">
-</racine>
+<repertoire xmlns:xsi="http://www.w3.org/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/test.xsd">
+
+	<personne sexe="Masculin">
+		<nom>YAO</nom>
+		<prenom>Cyrille</prenom>
+		<age>33 ans</age>
+		<entreprise>PACCI</entreprise>
+		<voiture modele="X7" annee="2015">BMW</voiture>
+		<domicile ville="Bonoua" quartier="Residentiel"></domicile>
+	</personne>
+
+</repertoire>

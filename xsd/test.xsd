@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="personne">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nom" type="xsd:string" default="Inconnu" />
+				<xsd:element name="prenom" type="xsd:string" default="Inconnu" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element name="age" type="xsd:int" />
+				<xsd:element name="entreprise" type="xsd/string" fixed="PACCI" />
+				<xsd:element name="voiture">
+
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:string">
+								<xsd:attribute name="modele" type="xsd:string"></xsd:attribute>
+								<xsd:attribute name="annee" type="xsd:gYear"></xsd:attribute>
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="domicile">
+					<xsd:complexType>
+						<xsd:attribute name="ville" type="xsd:string"></xsd:attribute>
+						<xsd:attribute name="quartier" type="xsd:string"></xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+
+			</xsd:sequence>
+			<xsd:attribute name="sexe" type="xsd:string" default="Masculin" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+
+	
+
+
 </xsd:schema>
