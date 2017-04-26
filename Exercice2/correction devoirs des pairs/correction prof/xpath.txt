@@ -1,0 +1,14 @@
+1. tous les nœuds descendants du 4ème nœud "livre"
+/bibliotheque/livre[position()=4]/descendant::*
+
+2. le premier nœud "livre" du style "Bande Dessinée"
+/bibliotheque/livre[@style="Bande Dessinée"][position()=1]
+
+3. tous les titres français des livres sortis en 2001 ;
+/bibliotheque/livre[annee="2001"]/titres/titre[@lang="fr"]
+
+4. tous les nœuds frères suivants du nœud "titres" du livre "Astérix et Latraviata" ;
+/bibliotheque/livre[titres/titre="Astérix et Latraviata"]/titres/following-sibling::*
+
+5. tous les nœuds "livres" possédant au moins un titre dans 2 langues différentes.
+/bibliotheque/livre[titres/count(titre)>1]
